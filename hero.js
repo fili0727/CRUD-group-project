@@ -2,9 +2,8 @@
 
 // ============== global variables ============== //
 const endpoint =
-  "https://crud-gruppe-default-rtdb.europe-west1.firebasedatabase.app/"; //husk .json
+  "https://superhelte-network-default-rtdb.europe-west1.firebasedatabase.app/"; //husk .json
 
-// https://superhelte-network-default-rtdb.europe-west1.firebasedatabase.app/
 let posts;
 
 // ============== load and init app ============== //
@@ -65,7 +64,7 @@ async function updatePostsGrid() {
 
 // Get all posts - HTTP Method: GET
 async function getPosts() {
-  const response = await fetch(`${endpoint}/posts.json`); // fetch request, (GET)
+  const response = await fetch(`${endpoint}/superheroes.json`); // fetch request, (GET)
   const data = await response.json(); // parse JSON to JavaScript
   const posts = prepareData(data); // convert object of object to array of objects
   return posts; // return posts
@@ -83,8 +82,8 @@ function showPost(postObject) {
   const html = /*html*/ `
         <article class="grid-item">
             <img src="${postObject.image}" />
-            <h3>${postObject.title}</h3>
-            <p>${postObject.body}</p>
+            <h3>${postObject.name}</h3>
+            <p>${postObject.powers}</p>
             <div class="btns">
                 <button class="btn-delete">Delete</button>
                 <button class="btn-update">Update</button>
