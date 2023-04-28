@@ -57,15 +57,10 @@
     "9": {
       "name": "Aquaman",
       "alias": "Arthur Curry",
-      "powers": [
-        "superhuman strength",
-        "underwater breathing",
-        "telepathy with marine life",
-        "water manipulation"
-      ],
+      "powers": "superhuman strength, underwater breathing, telepathy with marine life, water manipulation",
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/63.jpg"
     },
-    "9": {
+    "10": {
       "name": "Aquaman",
       "alias": "Arthur Curry",
       "powers": [
@@ -75,13 +70,13 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
     },
-    "10": {
+    "11": {
       "name": "Black Widow",
       "alias": "Natasha Romanoff",
       "powers": ["martial arts", "espionage", "weapons expert", "acrobatics"],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
     },
-    "11": {
+    "12": {
       "name": "Hulk",
       "alias": "Bruce Banner",
       "powers": [
@@ -92,7 +87,7 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
     },
-    "12": {
+    "13": {
       "name": "Doctor Strange",
       "alias": "Stephen Strange",
       "powers": [
@@ -103,7 +98,7 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/75.jpg"
     },
-    "13": {
+    "14": {
       "name": "Wolverine",
       "alias": "Logan",
       "powers": [
@@ -114,7 +109,7 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/80.jpg"
     },
-    "14": {
+    "15": {
       "name": "Storm",
       "alias": "Ororo Munroe",
       "powers": [
@@ -125,7 +120,7 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/86.jpg"
     },
-    "15": {
+    "16": {
       "name": "Green Arrow",
       "alias": "Oliver Queen",
       "powers": [
@@ -136,7 +131,7 @@
       ],
       "image": "https://www.superherodb.com/pictures2/portraits/10/100/82.jpg"
     },
-    "16": {
+    "17": {
       "name": "Supergirl",
       "alias": "Kara Zor-El",
       "powers": ["super strength", "flight", "heat vision", "freeze breath"],
