@@ -4,109 +4,120 @@
       "name": "Superman",
       "alias": "Clark Kent",
       "powers": "flight, super strength, heat vision, freeze breath",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg",
+      "universe": "DC"
     },
     "1": {
       "name": "Batman",
       "alias": "Bruce Wayne",
       "powers": "wealth, intelligence, martial arts, gadgets",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/639.jpg",
+      "universe": "DC"
     },
     "2": {
       "name": "Spider-Man",
       "alias": "Peter Parker",
       "powers": "web-slinging, wall-crawling, spider sense, superhuman strength",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg",
+      "universe": "Marvel"
     },
     "3": {
       "name": "Iron Man",
       "alias": "Tony Stark",
       "powers": "genius-level intellect, powered suit",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg",
+      "universe": "Marvel"
     },
     "4": {
       "name": "Wonder Woman",
       "alias": "Diana Prince",
       "powers": "super strength, superhuman agility,flight,combat skills",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/807.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/807.jpg",
+      "universe": "DC"
     },
     "5": {
       "name": "The Flash",
       "alias": "Barry Allen",
       "powers": "superhuman speed, time travel, phasing, superhuman healing",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/65.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/65.jpg",
+      "universe": "DC"
     },
     "6": {
       "name": "Green Lantern",
       "alias": "Hal Jordan",
       "powers": "power ring, flight, force fields, energy constructs",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg",
+      "universe": "DC"
     },
     "7": {
       "name": "Captain America",
       "alias": "Steve Rogers",
       "powers": "superhuman strength, agility, healing, indestructible shield",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/274.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/274.jpg",
+      "universe": "Marvel"
     },
     "8": {
       "name": "Thor",
       "alias": "Thor Odinson",
       "powers": "superhuman strength, Mjolnir hammer, weather manipulation, flight",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/140.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/140.jpg",
+      "universe": "Marvel"
     },
     "9": {
       "name": "Aquaman",
       "alias": "Arthur Curry",
       "powers": "superhuman strength, underwater breathing, telepathy with marine life, water manipulation",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/63.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/63.jpg",
+      "universe": "DC"
     },
     "10": {
-      "name": "Aquaman",
-      "alias": "Arthur Curry",
-      "powers": "superhuman strength, ability to breathe underwater, control over sea life",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
-    },
-    "11": {
       "name": "Black Widow",
       "alias": "Natasha Romanoff",
       "powers": "martial arts, espionage, weapons expert, acrobatics",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg",
+      "universe": "Marvel"
     },
-    "12": {
+    "11": {
       "name": "Hulk",
       "alias": "Bruce Banner",
       "powers": "superhuman strength, regeneration, incredible durability, limitless anger",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg",
+      "universe": "Marvel"
     },
-    "13": {
+    "12": {
       "name": "Doctor Strange",
       "alias": "Stephen Strange",
       "powers": "sorcery, teleportation, energy projection, time manipulation",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/75.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/75.jpg",
+      "universe": "Marvel"
     },
-    "14": {
+    "13": {
       "name": "Wolverine",
       "alias": "Logan",
       "powers": "healing factor, superhuman senses, adamantium claws, enhanced strength",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/80.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/80.jpg",
+      "universe": "Marvel"
     },
-    "15": {
+    "14": {
       "name": "Storm",
       "alias": "Ororo Munroe",
       "powers": "weather manipulation, flight, atmospheric pressure control, lightning strikes",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/86.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/86.jpg",
+      "universe": "Marvel"
     },
-    "16": {
+    "15": {
       "name": "Green Arrow",
       "alias": "Oliver Queen",
       "powers": "archery, master tactician, martial arts, utility arrows",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/82.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/82.jpg",
+      "universe": "DC"
     },
-    "17": {
+    "16": {
       "name": "Supergirl",
       "alias": "Kara Zor-El",
       "powers": "super strength, flight, heat vision, freeze breath",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/247.jpg"
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/247.jpg",
+      "universe": "DC"
     }
   }
 }
