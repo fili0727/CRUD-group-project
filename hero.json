@@ -39,14 +39,14 @@
       "name": "The Flash",
       "alias": "Barry Allen",
       "powers": "superhuman speed, time travel, phasing, superhuman healing",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/65.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/13837.jpg?v=1631771554",
       "universe": "DC"
     },
     "6": {
       "name": "Green Lantern",
       "alias": "Hal Jordan",
       "powers": "power ring, flight, force fields, energy constructs",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/13445.jpg?v=1635992812",
       "universe": "DC"
     },
     "7": {
@@ -67,14 +67,14 @@
       "name": "Aquaman",
       "alias": "Arthur Curry",
       "powers": "superhuman strength, underwater breathing, telepathy with marine life, water manipulation",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/63.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/100/634.jpg?v=1636361526",
       "universe": "DC"
     },
     "10": {
       "name": "Black Widow",
       "alias": "Natasha Romanoff",
       "powers": "martial arts, espionage, weapons expert, acrobatics",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/248.jpg?v=1595028019",
       "universe": "Marvel"
     },
     "11": {
@@ -88,35 +88,35 @@
       "name": "Doctor Strange",
       "alias": "Stephen Strange",
       "powers": "sorcery, teleportation, energy projection, time manipulation",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/75.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/32646.jpg?v=1633567451",
       "universe": "Marvel"
     },
     "13": {
       "name": "Wolverine",
       "alias": "Logan",
       "powers": "healing factor, superhuman senses, adamantium claws, enhanced strength",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/80.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/161.jpg?v=1605762552",
       "universe": "Marvel"
     },
     "14": {
       "name": "Storm",
       "alias": "Ororo Munroe",
       "powers": "weather manipulation, flight, atmospheric pressure control, lightning strikes",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/86.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/135.jpg?v=1596335535",
       "universe": "Marvel"
     },
     "15": {
       "name": "Green Arrow",
       "alias": "Oliver Queen",
       "powers": "archery, master tactician, martial arts, utility arrows",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/82.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/696.jpg?v=1609418451",
       "universe": "DC"
     },
     "16": {
       "name": "Supergirl",
       "alias": "Kara Zor-El",
       "powers": "super strength, flight, heat vision, freeze breath",
-      "image": "https://www.superherodb.com/pictures2/portraits/10/100/247.jpg",
+      "image": "https://www.superherodb.com/pictures2/portraits/10/050/790.jpg?v=1610918196",
       "universe": "DC"
     }
   }
