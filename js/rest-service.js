@@ -16,11 +16,12 @@ async function getUsers() {
 }
 
 // Create a new user - HTTP Method: POST
-async function createUser(name, alias, powers, image) {
+async function createUser(name, alias, powers, image, universe) {
   const jsObject = {
     name: name,
     alias: alias,
     powers: powers,
+    universe: universe,
     image: image,
   };
   const postAsJson = JSON.stringify(jsObject);
@@ -48,8 +49,8 @@ async function deleteUser(id) {
 }
 
 // Update an existing post - HTTP Method: PUT
-async function updateUser(id, name, alias, powers, image) {
-  const userToUpdate = { name, alias, image, powers };
+async function updateUser(id, name, alias, powers, image, universe) {
+  const userToUpdate = { name, alias, image, universe, powers };
   console.log(userToUpdate);
   const postAsJson = JSON.stringify(userToUpdate);
   const url = `${endpoint}/superheroes/${id}.json`;

@@ -122,12 +122,11 @@ function showUser(userObject) {
   function updateClicked() {
     // console.log("Update button clicked");
     document.querySelector("#dialog-update-user").showModal();
-
     document.querySelector("#alias-update").value = userObject.alias;
     document.querySelector("#name-update").value = userObject.name;
     document.querySelector("#powers-update").value = userObject.powers;
     document.querySelector("#image-update").value = userObject.image;
-    document.querySelector("#select-universe-create").value =
+    document.querySelector("#select-universe-update").value =
       userObject.universe;
     document
       .querySelector("#form-update-user")
@@ -165,7 +164,7 @@ async function updateUserClicked(event) {
   const image = form.image.value;
 
   console.log(id);
-  const response = await updateUser(id, name, alias, powers, universe, image);
+  const response = await updateUser(id, name, alias, powers, image, universe);
   if (response.ok) {
     updateUsersGrid();
     showSnackbar("User updated");
@@ -184,7 +183,7 @@ async function createUserClicked(event) {
   const name = document.querySelector("#name-input").value;
   const universe = document.querySelector("#select-universe-create").value;
   const img = document.querySelector("#image-input").value;
-  const response = await createUser(name, alias, powers, universe, img);
+  const response = await createUser(name, alias, powers, img, universe);
   if (response.ok) {
     updateUsersGrid();
     showSnackbar("User created");
