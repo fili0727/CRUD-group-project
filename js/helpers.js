@@ -12,12 +12,4 @@ function prepareData(dataObject) {
   return array; // return array back to "the caller"
 }
 
-function compareDC(post1, post2) {
-  return post1.DC.localeCompare(post2.DC);
-}
-
-function compareMarvel(post1, post2) {
-  return post1.Marvel.localeCompare(post2.Marvel);
-}
-
 export { prepareData };

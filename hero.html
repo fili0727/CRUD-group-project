@@ -16,16 +16,27 @@
 
     <main>
       <section class="tools-grid">
-        <label for="select-sort-by">
-          Filter by:
-          <select id="select-sort-by">
-            <option value="" selected>Not selected</option>
+        <label for="select-filter-by">
+          Universe:
+          <select id="select-filter-by">
+            <option value="" selected>Any</option>
             <option value="DC">DC</option>
-            <option value="marvel">Marvel</option>
+            <option value="Marvel">Marvel</option>
           </select>
         </label>
         <h2>Profiles</h2>
-        <input type="search" name="inputSearch" id="input-search" placeholder="Search by alias" />
+        <div id="searchSortGrid" class="tools-grid">
+          <select id="select-sort-by" class="">
+            <option value="aToz" selected>A->Z</option>
+            <option value="zToa">Z->A</option>
+          </select>
+          <input
+            type="search"
+            name="inputSearch"
+            id="input-search"
+            placeholder="Search by alias"
+          />
+        </div>
       </section>
       <section id="users" class="grid-container"></section>
     </main>
@@ -41,8 +52,20 @@
         <input type="text" id="name-input" placeholder="Name" required />
         <label for="power">Powers:</label>
         <input type="text" id="powers-input" placeholder="Powers" required />
+        <label for="universe">Universe:</label> <br />
+        <select id="select-universe-create">
+          <option value="" selected>Choose universe</option>
+          <option value="DC">DC</option>
+          <option value="Marvel">Marvel</option>
+        </select>
+        <br />
         <label for="img">Profile picture:</label>
-        <input type="url" id="image-input" placeholder="Paste an image URL" required />
+        <input
+          type="url"
+          id="image-input"
+          placeholder="Paste an image URL"
+          required
+        />
         <input type="submit" value="Create user" />
       </form>
     </dialog>
@@ -58,6 +81,13 @@
         <input type="text" id="name-update" required name="name" />
         <label for="powers">Powers:</label>
         <input type="text" id="powers-update" name="powers" required />
+        <label for="universe">Universe:</label> <br />
+        <select id="select-universe-update">
+          <option value="" selected>Choose universe</option>
+          <option value="DC">DC</option>
+          <option value="Marvel">Marvel</option>
+        </select>
+        <br />
         <label for="img">Image:</label>
         <input type="url" id="image-update" name="image" required />
         <input type="submit" value="Update post" />
@@ -76,7 +106,7 @@
         </div>
       </form>
     </dialog>
-
+    <div id="snackbar"></div>
     <script src="./js/hero.js" type="module"></script>
   </body>
 </html>

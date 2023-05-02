@@ -279,8 +279,6 @@ dialog p {
   background-color: var(--pink);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
-  padding: 1em;
   justify-content: space-between;
   justify-items: stretch;
 }
@@ -288,12 +286,13 @@ dialog p {
 @media (min-width: 600px) {
   .tools-grid {
     grid-template-columns: auto auto auto;
-    margin: 1em auto;
   }
 }
 
-.tools-grid label {
+.tools-grid label,
+.tools-grid div {
   max-width: 350px;
+  margin: 0px 20px;
 }
 /* ---------- Delete  ---------- */
 #delete-grid {
@@ -303,4 +302,24 @@ dialog p {
 #delete-grid * {
   margin: 5px;
   width: 90%;
+}
+/* Snackbar */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
 }
