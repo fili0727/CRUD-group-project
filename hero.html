@@ -15,16 +15,19 @@
     </header>
 
     <main>
-      <section>
+      <section class="tools-grid">
+        <label for="select-sort-by">
+          Filter by:
+          <select id="select-sort-by">
+            <option value="" selected>Not selected</option>
+            <option value="DC">DC</option>
+            <option value="marvel">Marvel</option>
+          </select>
+        </label>
         <h2>Profiles</h2>
-        <input
-          type="search"
-          name="inputSearch"
-          id="input-search"
-          placeholder="Search by alias"
-        />
-        <section id="users" class="grid-container"></section>
+        <input type="search" name="inputSearch" id="input-search" placeholder="Search by alias" />
       </section>
+      <section id="users" class="grid-container"></section>
     </main>
 
     <!-- dialog - create new post -->
@@ -39,12 +42,7 @@
         <label for="power">Powers:</label>
         <input type="text" id="powers-input" placeholder="Powers" required />
         <label for="img">Profile picture:</label>
-        <input
-          type="url"
-          id="image-input"
-          placeholder="Paste an image URL"
-          required
-        />
+        <input type="url" id="image-input" placeholder="Paste an image URL" required />
         <input type="submit" value="Create user" />
       </form>
     </dialog>
