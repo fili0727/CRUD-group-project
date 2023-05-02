@@ -1,17 +1,23 @@
 "use strict";
 
-// ============== global variables ============== //
-const endpoint =
-  "https://superhelte-network-default-rtdb.europe-west1.firebasedatabase.app/"; //husk .json
+// import data
+import {
+  getUsers,
+  createUser,
+  deleteUser,
+  updateUser,
+} from "./rest-service.js";
+
+import {} from "./helpers.js";
 
 let users;
 
-// ============== load and init app ============== //
+// Load and init app
 
 window.addEventListener("load", initApp);
 
 function initApp() {
-  updateUsersGrid(); // update the grid of posts: get and show all posts
+  updateUsersGrid();
 
   // event listener
   document
@@ -29,7 +35,7 @@ function initApp() {
     .addEventListener("search", inputSearchChanged);
 }
 
-// ============== events ============== //
+// events
 
 function showCreateUserDialog() {
   console.log("Create New User clicked!");
@@ -50,21 +56,12 @@ function searchUsers(search) {
   );
   return results;
 }
-// to do
 
-// ============== posts ============== //
+// Users
 
 async function updateUsersGrid() {
   users = await getUsers(); // get posts from rest endpoint and save in global variable
   showUsers(users); // show all posts (append to the DOM) with posts as argument
-}
-
-// Get all posts - HTTP Method: GET
-async function getUsers() {
-  const response = await fetch(`${endpoint}/superheroes.json`); // fetch request, (GET)
-  const data = await response.json(); // parse JSON to JavaScript
-  const users = prepareData(data); // convert object of object to array of objects
-  return users; // return posts
 }
 
 function showUsers(listOfUsers) {
@@ -168,72 +165,4 @@ function createUserClicked(event) {
   const form = event.target;
   form.reset();
   document.querySelector("#dialog-create-user").close();
-}
-// Create a new post - HTTP Method: POST
-async function createUser(name, alias, powers, image) {
-  const jsObject = {
-    name: name,
-    alias: alias,
-    powers: powers,
-    image: image,
-  };
-  const postAsJson = JSON.stringify(jsObject);
-  console.log(`postAsJson: ${postAsJson}`);
-  const response = await fetch(`${endpoint}/superheroes.json`, {
-    method: "POST",
-    body: postAsJson,
-  });
-  console.log(`response: ${response}`);
-  if (response.ok) {
-    console.log("new post");
-    updateUsersGrid();
-  }
-  // create new post object
-  // convert the JS object to JSON string
-  // POST fetch request with JSON in the body
-  // check if response is ok - if the response is successful
-  // update the post grid to display all posts and the new post
-}
-
-// Update an existing post - HTTP Method: DELETE
-async function deleteUser(id) {
-  const response = await fetch(`${endpoint}/superheroes/${id}.json`, {
-    method: "DELETE",
-  });
-  if (response.ok) {
-    console.log("deleted");
-    updateUsersGrid();
-  }
-  // DELETE fetch request
-  // check if response is ok - if the response is successful
-  // update the post grid to display posts
-}
-
-// Delete an existing post - HTTP Method: PUT
-async function updateUser(id, name, alias, powers, image) {
-  const userToUpdate = { name, alias, image, powers };
-  console.log(userToUpdate);
-  const postAsJson = JSON.stringify(userToUpdate);
-  const url = `${endpoint}/superheroes/${id}.json`;
-  const response = await fetch(url, { method: "PUT", body: postAsJson });
-  console.log(response);
-  if (response.ok) {
-    console.log("updated");
-    updateUsersGrid();
-  }
-}
-
-// ============== helper function ============== //
-
-// convert object of objects til an array of objects
-function prepareData(dataObject) {
-  const array = []; // define empty array
-  // loop through every key in dataObject
-  // the value of every key is an object
-  for (const key in dataObject) {
-    const object = dataObject[key]; // define object
-    object.id = key; // add the key in the prop id
-    array.push(object); // add the object to array
-  }
-  return array; // return array back to "the caller"
 }
