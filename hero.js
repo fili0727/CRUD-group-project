@@ -102,26 +102,26 @@ function showUser(userObject) {
   function deleteClicked() {
     console.log("Delete button clicked");
     document.querySelector("#dialog-delete-user").showModal();
-    document.querySelector("#dialog-delete-user-name").textContent =
-      userObject.name;
+    document.querySelector("#dialog-delete-user-alias").textContent =
+      userObject.alias;
     document
       .querySelector("#form-delete-user")
       .setAttribute("data-id", userObject.id);
+    document.querySelector("#btn-no").addEventListener("click", function () {
+      document.querySelector("#dialog-delete-user").close();
+    });
     document
       .querySelector("#form-delete-user")
       .addEventListener("submit", deleteUserClicked);
-
-    // to do
   }
 
   // called when update button is clicked
-  // to do
   function updateClicked() {
     console.log("Update button clicked");
     document.querySelector("#dialog-update-user").showModal();
-    //insert title, body and img values
-    document.querySelector("#name-update").value = userObject.alias;
-    document.querySelector("#alias-update").value = userObject.name;
+
+    document.querySelector("#alias-update").value = userObject.alias;
+    document.querySelector("#name-update").value = userObject.name;
     document.querySelector("#powers-update").value = userObject.powers;
     document.querySelector("#image-update").value = userObject.image;
     document
@@ -140,7 +140,7 @@ function deleteUserClicked(event) {
   console.log(id);
   deleteUser(id);
   form.reset();
-  document.querySelector("#dialog-delete-post").close();
+  document.querySelector("#dialog-delete-user").close();
 }
 
 function updateUserClicked(event) {
@@ -153,11 +153,13 @@ function updateUserClicked(event) {
   const image = form.image.value;
 
   console.log(id);
-  updateUser(id, name, powers, alias, image);
+  updateUser(id, name, alias, powers, image);
+  document.querySelector("#dialog-update-user").close();
 }
 
 function createUserClicked(event) {
   event.preventDefault();
+
   const alias = document.querySelector("#alias-input").value;
   const powers = document.querySelector("#powers-input").value;
   const name = document.querySelector("#name-input").value;
@@ -219,11 +221,6 @@ async function updateUser(id, name, alias, powers, image) {
     console.log("updated");
     updateUsersGrid();
   }
-  // post update to update
-  // convert the JS object to JSON string
-  // PUT fetch request with JSON in the body. Calls the specific element in resource
-  // check if response is ok - if the response is successful
-  // update the post grid to display all posts and the new post
 }
 
 // ============== helper function ============== //
