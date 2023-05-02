@@ -1,12 +1,7 @@
 "use strict";
 
 // import data
-import {
-  getUsers,
-  createUser,
-  deleteUser,
-  updateUser,
-} from "./rest-service.js";
+import { getUsers, createUser, deleteUser, updateUser } from "./rest-service.js";
 
 import {} from "./helpers.js";
 
@@ -20,19 +15,12 @@ function initApp() {
   updateUsersGrid();
 
   // event listener
-  document
-    .querySelector("#btn-create-user")
-    .addEventListener("click", showCreateUserDialog);
-  document
-    .querySelector("#form-create-user")
-    .addEventListener("submit", createUserClicked);
+  document.querySelector("#btn-create-user").addEventListener("click", showCreateUserDialog);
+  document.querySelector("#form-create-user").addEventListener("submit", createUserClicked);
 
-  document
-    .querySelector("#input-search")
-    .addEventListener("keyup", inputSearchChanged);
-  document
-    .querySelector("#input-search")
-    .addEventListener("search", inputSearchChanged);
+  document.querySelector("#input-search").addEventListener("keyup", inputSearchChanged);
+  document.querySelector("#input-search").addEventListener("search", inputSearchChanged);
+  document.querySelector("#select-sort-by").addEventListener("change", sortByChanged);
 }
 
 // events
@@ -51,9 +39,7 @@ function inputSearchChanged(event) {
 function searchUsers(search) {
   search = search.toLowerCase();
 
-  const results = users.filter(user =>
-    user.alias.toLowerCase().includes(search)
-  );
+  const results = users.filter((user) => user.alias.toLowerCase().includes(search));
   return results;
 }
 
@@ -92,28 +78,19 @@ function showUser(userObject) {
   document.querySelector("#users").insertAdjacentHTML("beforeend", html); // append html to the DOM - section#posts
 
   // add event listeners to .btn-delete and .btn-update
-  document
-    .querySelector("#users article:last-child .btn-delete")
-    .addEventListener("click", deleteClicked);
-  document
-    .querySelector("#users article:last-child .btn-update")
-    .addEventListener("click", updateClicked);
+  document.querySelector("#users article:last-child .btn-delete").addEventListener("click", deleteClicked);
+  document.querySelector("#users article:last-child .btn-update").addEventListener("click", updateClicked);
 
   // called when delete button is clicked
   function deleteClicked() {
     console.log("Delete button clicked");
     document.querySelector("#dialog-delete-user").showModal();
-    document.querySelector("#dialog-delete-user-alias").textContent =
-      userObject.alias;
-    document
-      .querySelector("#form-delete-user")
-      .setAttribute("data-id", userObject.id);
+    document.querySelector("#dialog-delete-user-alias").textContent = userObject.alias;
+    document.querySelector("#form-delete-user").setAttribute("data-id", userObject.id);
     document.querySelector("#btn-no").addEventListener("click", function () {
       document.querySelector("#dialog-delete-user").close();
     });
-    document
-      .querySelector("#form-delete-user")
-      .addEventListener("submit", deleteUserClicked);
+    document.querySelector("#form-delete-user").addEventListener("submit", deleteUserClicked);
   }
 
   // called when update button is clicked
@@ -125,12 +102,8 @@ function showUser(userObject) {
     document.querySelector("#name-update").value = userObject.name;
     document.querySelector("#powers-update").value = userObject.powers;
     document.querySelector("#image-update").value = userObject.image;
-    document
-      .querySelector("#form-update-user")
-      .setAttribute("data-id", userObject.id);
-    document
-      .querySelector("#form-update-user")
-      .addEventListener("submit", updateUserClicked);
+    document.querySelector("#form-update-user").setAttribute("data-id", userObject.id);
+    document.querySelector("#form-update-user").addEventListener("submit", updateUserClicked);
   }
 }
 
@@ -172,4 +145,16 @@ async function createUserClicked(event) {
   const form = event.target;
   form.reset();
   document.querySelector("#dialog-create-user").close();
+}
+
+function sortByChanged(event) {
+  const selectedValue = event.target.value;
+
+  if (selectedValue === "DC") {
+    posts.sort(compareTitle);
+  } else if (selectedValue === "Marvel") {
+    posts.sort(compareBody);
+  }
+
+  showUsers(users);
 }

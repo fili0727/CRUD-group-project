@@ -1,4 +1,5 @@
 //Helper functions
+
 function prepareData(dataObject) {
   const array = []; // define empty array
   // loop through every key in dataObject
@@ -9,6 +10,14 @@ function prepareData(dataObject) {
     array.push(object); // add the object to array
   }
   return array; // return array back to "the caller"
+}
+
+function compareDC(post1, post2) {
+  return post1.DC.localeCompare(post2.DC);
+}
+
+function compareMarvel(post1, post2) {
+  return post1.Marvel.localeCompare(post2.Marvel);
 }
 
 export { prepareData };
