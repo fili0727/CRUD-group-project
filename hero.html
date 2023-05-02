@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Superhero network with Firebase REST API</h1>
-      <button id="btn-create-post">Create New User</button>
+      <button id="btn-create-user">Create New User</button>
     </header>
 
     <main>
@@ -22,20 +22,20 @@
           id="input-search"
           placeholder="Search by name"
         />
-        <section id="posts" class="grid-container"></section>
+        <section id="users" class="grid-container"></section>
       </section>
     </main>
 
     <!-- dialog - create new post -->
-    <!-- to do  -->
-    <dialog id="dialog-create-post">
+
+    <dialog id="dialog-create-user">
       <h2>Create new user</h2>
-      <form id="form-create-post">
+      <form id="form-create-user">
         <label for="name">Name:</label>
         <input type="text" id="name-input" placeholder="Name" required />
-        <label for="Powers">Powers:</label>
+        <label for="power">Powers:</label>
         <input type="text" id="powers-input" placeholder="Powers" required />
-        <label for="Alias">Alias:</label>
+        <label for="alias">Alias:</label>
         <input type="text" id="alias-input" placeholder="Alias" required />
         <label for="img">Profile picture:</label>
         <input
@@ -49,25 +49,28 @@
     </dialog>
 
     <!-- dialog - update post -->
-    <!-- to do  -->
-    <dialog id="dialog-update-post">
-      <h2>Update post</h2>
-      <form id="form-update-post">
-        <label for="title">Title:</label>
-        <input type="text" id="title-update" required name="title" />
-        <label for="body">Body:</label>
-        <input type="text" id="body-update" name="body" required />
+
+    <dialog id="dialog-update-user">
+      <h2>Update User</h2>
+      <form id="form-update-user">
+        <label for="name">Name:</label>
+        <input type="text" id="name-update" required name="name" />
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias-update" name="alias" required />
+        <label for="powers">Powers:</label>
+        <input type="text" id="powers-update" name="powers" required />
         <label for="img">Image:</label>
         <input type="url" id="image-update" name="image" required />
         <input type="submit" value="Update post" />
       </form>
     </dialog>
+
     <!-- dialog - delete post -->
-    <!-- to do  -->
-    <dialog id="dialog-delete-post">
-      <h2>Do you want to delete this post?</h2>
-      <p id="dialog-delete-post-title"></p>
-      <form action="" id="form-delete-post">
+
+    <dialog id="dialog-delete-user">
+      <h2>Do you want to delete this user?</h2>
+      <p id="dialog-delete-user-name"></p>
+      <form action="" id="form-delete-user">
         <div id="delete-grid">
           <input type="button" value="No" />
           <input type="submit" value="Yes" />
