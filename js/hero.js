@@ -52,7 +52,7 @@ function searchUsers(search) {
   search = search.toLowerCase();
 
   const results = users.filter(user =>
-    user.name.toLowerCase().includes(search)
+    user.alias.toLowerCase().includes(search)
   );
   return results;
 }
@@ -66,7 +66,11 @@ async function updateUsersGrid() {
 
 function showUsers(listOfUsers) {
   document.querySelector("#users").innerHTML = ""; // reset the content of section#posts
-
+  listOfUsers.sort((a, b) => {
+    if (a.alias.toLowerCase() < b.alias.toLowerCase()) return -1;
+    else if (a.alias.toLowerCase() > b.alias.toLowerCase()) return 1;
+    else return 0;
+  });
   for (const user of listOfUsers) {
     showUser(user); // for every post object in listOfPosts, call showPost
   }

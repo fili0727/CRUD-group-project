@@ -10,4 +10,5 @@ function prepareData(dataObject) {
   }
   return array; // return array back to "the caller"
 }
+
 export { prepareData };
