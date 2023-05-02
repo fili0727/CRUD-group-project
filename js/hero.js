@@ -127,6 +127,8 @@ function showUser(userObject) {
     document.querySelector("#name-update").value = userObject.name;
     document.querySelector("#powers-update").value = userObject.powers;
     document.querySelector("#image-update").value = userObject.image;
+    document.querySelector("#select-universe-create").value =
+      userObject.universe;
     document
       .querySelector("#form-update-user")
       .setAttribute("data-id", userObject.id);
@@ -158,11 +160,12 @@ async function updateUserClicked(event) {
   const id = form.getAttribute("data-id");
   const name = form.name.value;
   const alias = form.alias.value;
+  const universe = form.universe.value;
   const powers = form.powers.value;
   const image = form.image.value;
 
   console.log(id);
-  const response = await updateUser(id, name, alias, powers, image);
+  const response = await updateUser(id, name, alias, powers, universe, image);
   if (response.ok) {
     updateUsersGrid();
     showSnackbar("User updated");
@@ -179,8 +182,9 @@ async function createUserClicked(event) {
   const alias = document.querySelector("#alias-input").value;
   const powers = document.querySelector("#powers-input").value;
   const name = document.querySelector("#name-input").value;
+  const universe = document.querySelector("#select-universe-create").value;
   const img = document.querySelector("#image-input").value;
-  const response = await createUser(name, alias, powers, img);
+  const response = await createUser(name, alias, powers, universe, img);
   if (response.ok) {
     updateUsersGrid();
     showSnackbar("User created");
@@ -203,10 +207,12 @@ function showSnackbar(message) {
 
 function filterByChanged(event) {
   const selectedValue = event.target.value;
-  const filteredUsers = users.filter(function (user) {
-    return user.universe == selectedValue;
-  });
-  showUsers(filteredUsers);
+  if (selectedValue != "") {
+    const filteredUsers = users.filter(function (user) {
+      return user.universe == selectedValue;
+    });
+    showUsers(filteredUsers);
+  } else showUsers(users);
 }
 function sortByChanged(event) {
   if (event.target.value == "zToa") {
