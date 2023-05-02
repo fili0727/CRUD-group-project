@@ -5,6 +5,11 @@
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
+  --navy: rgb(42, 47, 79);
+  --purple: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
   --white: #f2f2f2;
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
