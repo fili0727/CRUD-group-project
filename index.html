@@ -30,12 +30,7 @@
             <option value="aToz" selected>A->Z</option>
             <option value="zToa">Z->A</option>
           </select>
-          <input
-            type="search"
-            name="inputSearch"
-            id="input-search"
-            placeholder="Search by alias"
-          />
+          <input type="search" name="inputSearch" id="input-search" placeholder="Search by alias" />
         </div>
       </section>
       <section id="users" class="grid-container"></section>
@@ -46,6 +41,9 @@
     <dialog id="dialog-create-user">
       <h2>Create new user</h2>
       <form id="form-create-user">
+        <div method="dialog" class="cancel-btn">
+          <button class="btn-cancel">X</button>
+        </div>
         <label for="alias">Alias:</label>
         <input type="text" id="alias-input" placeholder="Alias" required />
         <label for="name">Name:</label>
@@ -60,12 +58,7 @@
         </select>
         <br />
         <label for="img">Profile picture:</label>
-        <input
-          type="url"
-          id="image-input"
-          placeholder="Paste an image URL"
-          required
-        />
+        <input type="url" id="image-input" placeholder="Paste an image URL" required />
         <input type="submit" value="Create user" />
       </form>
     </dialog>
