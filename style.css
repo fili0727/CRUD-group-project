@@ -111,18 +111,19 @@ main {
 }
 /* cancel button */
 
-.cancel-btn {
+.cancel-btn-div {
   grid-area: 1 / 2 / 2 / 3;
   margin: 0;
   padding: 0;
   background-color: var(--navy);
 }
-.btn-cancel {
-  font-family: papyrus;
+.cancel-btn {
   border-radius: 100%;
   background-color: var(--navy);
+  display: inline-block;
+  content: "\00d7";
 }
-#form-create-user > div {
+.cancel-btn-div {
   display: flex;
   justify-content: center;
   border-radius: 40%;

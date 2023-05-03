@@ -40,10 +40,10 @@
 
     <dialog id="dialog-create-user">
       <h2>Create new user</h2>
+      <div method="dialog" class="cancel-btn-div">
+        <button class="cancel-btn">X</button>
+      </div>
       <form id="form-create-user">
-        <div method="dialog" class="cancel-btn">
-          <button class="btn-cancel">X</button>
-        </div>
         <label for="alias">Alias:</label>
         <input type="text" id="alias-input" placeholder="Alias" required />
         <label for="name">Name:</label>
@@ -67,6 +67,9 @@
 
     <dialog id="dialog-update-user">
       <h2>Update User</h2>
+      <div method="dialog" class="cancel-btn-div">
+        <button class="cancel-btn">X</button>
+      </div>
       <form id="form-update-user">
         <label for="alias">Alias:</label>
         <input type="text" id="alias-update" name="alias" required />
