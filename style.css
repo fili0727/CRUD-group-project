@@ -109,7 +109,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-/* ---------- cancel button ---------- */
+/* cancel button */
 
 .cancel-btn {
   grid-area: 1 / 2 / 2 / 3;
