@@ -24,13 +24,18 @@
             <option value="Marvel">Marvel</option>
           </select>
         </label>
-        <h2>Profiles</h2>
+        <h2>Users</h2>
         <div id="searchSortGrid" class="tools-grid">
           <select id="select-sort-by" class="">
             <option value="aToz" selected>A->Z</option>
             <option value="zToa">Z->A</option>
           </select>
-          <input type="search" name="inputSearch" id="input-search" placeholder="Search by alias" />
+          <input
+            type="search"
+            name="inputSearch"
+            id="input-search"
+            placeholder="Search by alias"
+          />
         </div>
       </section>
       <section id="users" class="grid-container"></section>
@@ -58,7 +63,12 @@
         </select>
         <br />
         <label for="img">Profile picture:</label>
-        <input type="url" id="image-input" placeholder="Paste an image URL" required />
+        <input
+          type="url"
+          id="image-input"
+          placeholder="Paste an image URL"
+          required
+        />
         <input type="submit" value="Create user" />
       </form>
     </dialog>
