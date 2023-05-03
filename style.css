@@ -1,4 +1,4 @@
-/* ---------- root variables ---------- */
+/* root variables */
 :root {
   --navy: rgb(42, 47, 79);
   --purple: rgb(145, 127, 179);
@@ -9,7 +9,7 @@
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* ---------- general styling ---------- */
+/* general styling */
 html {
   color: var(--text-color-dark);
   font-family: var(--font-family);
@@ -51,7 +51,7 @@ img {
   height: auto;
 }
 
-/* ---------- header styling ---------- */
+/* header styling */
 header {
   background-color: var(--navy);
   color: var(--text-color-light);
@@ -63,7 +63,7 @@ header {
   right: 0;
 }
 
-/* ---------- footer styling ---------- */
+/* footer styling */
 
 footer {
   background-color: var(--navy);
@@ -72,14 +72,13 @@ footer {
   text-align: center;
 }
 
-/* ---------- main page styling ---------- */
+/* main page styling */
 main {
   background: var(--purple);
   animation: fadeIn 0.4s;
   padding: 190px 0 0;
 }
 
-/* ---------- animations ---------- */
 /* fade in */
 @keyframes fadeIn {
   from {
@@ -91,7 +90,7 @@ main {
   }
 }
 
-/* ---------- grid container styling ---------- */
+/* grid container styling */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -111,7 +110,7 @@ main {
   }
 }
 
-/* ---------- grid item styling ---------- */
+/* grid item styling */
 
 .grid-item {
   box-shadow: 1px 1px 8px var(--navy);
@@ -121,10 +120,6 @@ main {
   animation: fadeIn 0.5s;
   border-radius: 15%;
 }
-
-/* .grid-item:hover {
-   box-shadow: 0 8px 16px 0 var(--white); 
-} */
 
 .grid-item img {
   width: 100%;
@@ -144,7 +139,7 @@ main {
   text-transform: uppercase;
 }
 
-/* ---------- buttons in grid container ---------- */
+/* buttons in grid container */
 
 .grid-container .btns {
   padding: 1em 0 0;
@@ -157,7 +152,6 @@ main {
   width: 100%;
 }
 
-/* ---------- button hover ---------- */
 .grid-container .btn:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
@@ -184,10 +178,9 @@ main {
 
 .navy:hover {
   background-color: var(--purple);
-  /*  Making button bigger on hover  */
   padding: 20px 60px;
 }
-/* ---------- form styling ---------- */
+
 /* input form styling */
 form {
   margin: 2em auto 0;
@@ -243,7 +236,7 @@ select {
   max-width: 350px;
 }
 
-/* ---------- dialog styling ---------- */
+/* dialog styling */
 
 dialog {
   border-color: var(--navy);
@@ -272,7 +265,7 @@ dialog p {
   text-align: center;
 }
 
-/* ---------- tools grid styling ---------- */
+/* tools grid styling */
 
 .tools-grid {
   background-color: var(--pink);
@@ -293,7 +286,7 @@ dialog p {
   max-width: 350px;
   margin: 0px 20px;
 }
-/* ---------- Delete  ---------- */
+/* Delete */
 #delete-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
